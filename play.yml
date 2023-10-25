@@ -1,0 +1,13 @@
+- name: Loops
+  hosts: test
+
+  tasks:
+
+  - name: Create Folder
+    file:
+      path: "/home/beka/{{item}}"
+      state: directory
+    loop:
+      - dir1
+      - dir2
+

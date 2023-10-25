@@ -1,0 +1,5 @@
+[test]
+client1 
+
+[winda]
+client2 ansible_host=172.20.10.11 ansible_user=AZAMAT ansible_ssh_private_file=/home/azamat/.ssh/id_rsa

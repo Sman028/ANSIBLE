@@ -1,0 +1,21 @@
+- name: Create User
+  hosts: test
+  become: yes
+
+  tasks:
+
+  - name: Create group
+    group:
+      name: "{{item}}"
+      state: present
+    loop:
+      - dev
+      - admin
+ 
+  - name: Create user
+    user:
+      name: admin
+      shell: /bin/bash
+      group: admin
+      append: yes
+      home: /home/admin
